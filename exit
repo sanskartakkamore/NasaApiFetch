@@ -1,0 +1,35 @@
+[33mcommit 76a841d65abc0bc9807994b08f07329eef8a25b8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sun Jul 24 14:41:05 2022 +0530
+
+    Finally stored json data in mongodb
+
+[33mcommit cfb81f7084955f5074bd6f8585166b0bf3a793c4[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sun Jul 24 12:46:16 2022 +0530
+
+    Working on insert many
+
+[33mcommit ff4840e8ff8459991843ebbe117585a88ee458db[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sat Jul 23 22:20:46 2022 +0530
+
+    Remove the now ignored directory node_modules
+
+[33mcommit 381188bef9b05bdfe313e0a57580d3dd59798721[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sat Jul 23 22:16:43 2022 +0530
+
+    node modules removed
+
+[33mcommit 4997d7d05da84a7bdb3340c1bddfb068906e9709[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sat Jul 23 21:56:00 2022 +0530
+
+    Fetch the data but not yet saved in db
+
+[33mcommit dc4fcec28f5e393bd760f84a910434cf444da1fd[m
+Author: Sanskar <sanskartakkamore@gmail.com>
+Date:   Sat Jul 23 12:14:48 2022 +0530
+
+    Connection establish successfully with mongodb

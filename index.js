@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import mongoose from 'mongoose';
+// import express from ''
 //var express = require('express');
 //var router = express.Router();
 const mongoURI = "mongodb://localhost:27017/Nasa-cached-db"
@@ -10,6 +11,7 @@ const { Schema } = mongoose;
 const cacheSchema= new mongoose.Schema({
     id:{
         type: Number,
+        unique: true,
     required: true
     },
     sol:{
@@ -37,10 +39,10 @@ const cacheSchema= new mongoose.Schema({
 });
 
 
-
+//Sending Data to Mongodb
 const Post = mongoose.model('Post',cacheSchema );
 async function getPost(req,res) {
-   const nasa = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=DEMO_KEY");
+   const nasa = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=20&api_key=DEMO_KEY");
    const response = await nasa.json();
    //for(let i=0; i<=response.photos.length;i++){
        //console.log(response[i]['camera']);
@@ -56,7 +58,7 @@ async function getPost(req,res) {
                 });
             }    
     });
-    console.log(newPhotos);
+    //console.log(newPhotos);
     // console.log('do code is working till here') 
     // response.newPhotos.insertMany([ response.photos
     
@@ -84,3 +86,16 @@ async function getPost(req,res) {
 
 
 getPost();
+
+// const router = express.Router();
+// router.get("/fetchallnotes", fetchuser, async (req, res) => {
+//     try {
+//       const notes = await Note.find({
+//         user: req.user.id,
+//       });
+//       res.json(notes);
+//     } catch (error) {
+//       console.error(error.message);
+//       res.status(500).send("Internal Server Occured");
+//     }
+//   });
