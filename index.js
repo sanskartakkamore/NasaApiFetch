@@ -40,7 +40,7 @@ const cacheSchema= new mongoose.Schema({
 
 const Post = mongoose.model('Post',cacheSchema );
 async function getPost(req,res) {
-   const nasa = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10&api_key=DEMO_KEY");
+   const nasa = await fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=DEMO_KEY");
    const response = await nasa.json();
    //for(let i=0; i<=response.photos.length;i++){
        //console.log(response[i]['camera']);
@@ -62,7 +62,7 @@ async function getPost(req,res) {
     
     //  ])
 
-    cacheSchema.insertMany(newPhotos, function(error, docs) {});
+    Post.insertMany(newPhotos, function(error, docs) {});
     // try {
     //     const saveData = await newPhotos.save()
     //     res.json(saveData)
